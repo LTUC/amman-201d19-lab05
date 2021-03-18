@@ -34,6 +34,7 @@ return [prodNum,'The product of '+a+' and '+b+' is '+prodNum+'.']
 }
 
 // Here is the test for multiply(); uncomment it to run it
+console.log(multiply(5,9));
 testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -76,12 +77,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+let sumNum=0;
+for(let i=0;i<sumArr.length;i++){
+    sumNum=sum(sumNum,sumArr[i])[0]
+}
+return[sumNum,sumArr+' was passed in as an array of numbers, and '+sumNum+' is their sum.']
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+console.log(sumArray(testArray));
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 

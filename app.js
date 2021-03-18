@@ -69,8 +69,8 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4 ]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    let summationResult =sum(sum(sumArr[0],sumArr[1])[0],sumArr[2]); 
-    return[summationResult[0], sumArr[0]+','+sumArr[1]+','+sumArr[2]+' was passed in as an array of numbers, and '+ summationResult[0] +' is their sum.'];
+let summationResult =sum(sum(sumArr[0],sumArr[1])[0],sumArr[2]); 
+return[summationResult[0], sumArr[0]+','+sumArr[1]+','+sumArr[2]+' was passed in as an array of numbers, and '+ summationResult[0] +' is their sum.'];
 }
 //console.log((sumArray(testArray)));
 //console.log(sumArray([1,2,3]));
@@ -98,10 +98,8 @@ function multiplyArray(multArr) { //eslint-disable-line
 }
 //console.log(multiplyArray(testArray));
 // Here is the test for multiplyArray(); uncomment it to run it
-Problem6
 testMultiplyArray(testArray);
-testMultiplyArray(testArray);
-main
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -122,7 +120,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
-
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line   
     let result=1;  
     for (let i=0; i<dynamicArray.length; i++){ 

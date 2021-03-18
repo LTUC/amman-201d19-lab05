@@ -127,9 +127,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
-let numbers=''
+let numbers;
+let array2;
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     product=0
+    array2=''
+    numbers=''
 for (let i = 0; i< (testDynamicArray.length-2);i++) { 
     
     if(product<testDynamicArray[0]*testDynamicArray[1]) {multiply(testDynamicArray[0],testDynamicArray[1]);}
@@ -138,20 +141,18 @@ for (let i = 0; i< (testDynamicArray.length-2);i++) {
    
     
 }
+
+
 for (let i = 0; i < testDynamicArray.length; i++) {
-   if(i<(testDynamicArray.length-1)) 
-   {numbers+=testDynamicArray[i]+','}
-   else if (i===(testDynamicArray.length-1)) {
-    numbers+=testDynamicArray[i]
-   }
-   
-}
-let array2='The numbers '+numbers+' have a product of '+product+'.';
+    if(i<(testDynamicArray.length-1)) 
+    {numbers+=testDynamicArray[i]+','}
+    else if (i===(testDynamicArray.length-1)) {
+     numbers+=testDynamicArray[i]
+    }}
+ array2='The numbers '+numbers+' have a product of '+product+'.';
 return[product,array2];
 }
-
 // Here is the test for multiplyArray(); uncomment it to run it
-//console.log(multiplyAnyArray(testDynamicArray)[1]);
 testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.

@@ -74,12 +74,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4];
+
 function sumArray(sumArr) { 
-    let sum = 0 ;
-    for (let i=0;i<testArray.length;i++){
-        sum= sum +testArray[i];
-    }
-    return[sum,`${testArray} was passed in as an array of numbers, and ${sum} is their sum.`];
+    let result = sum(sumArr[0],sumArr[1]);
+    let ans = sum(result[0],sumArr[2])[0];
+    return[ans,`${testArray} was passed in as an array of numbers, and ${ans} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it

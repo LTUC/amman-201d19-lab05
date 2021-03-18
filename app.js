@@ -52,13 +52,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-    let conc = a + b + c ;
-    let prod = a*b*c ; 
+    let conc = sum [0]+ c;
+    let prod = Number (multiply[0])*c ; 
     return [conc , prod ,`${a} and ${b} and ${c} sum to ${conc}.`,`The product of ${a} and ${b} and ${c} is ${prod}.`]; 
 
 }
 
- sumAndMultiply (4,7,5) ;
+ console.log(sumAndMultiply (4,7,5)) ;
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 

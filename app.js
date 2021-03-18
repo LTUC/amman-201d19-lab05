@@ -54,6 +54,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
+    let x=a+b;
     let output1=sum((a+b),c)[0];
     let output2=multiply((a*b),c)[0];
     return[output1,output2,a+' and '+b+' and '+c+' sum to '+output1+'.','The product of '+a+' and '+b+' and '+c+' is '+output2+'.'];
@@ -103,9 +104,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+
 function multiplyArray(multArr) {
     let x= multiply(multArr[0]*multArr[1])[0];
     let output1 = multiply(x,multArr[2])[0];
+
+
+
     return[output1,'The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+' have a product of '+output1+'.']
     //eslint-disable-line
 
@@ -136,11 +141,22 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+function multiplyAnyArray(dynamicArray) {
+    let x=1;
+    for (let i=0; i<dynamicArray.length;i++)
+    {
+       x=multiply(x,dynamicArray[i])[0]; 
+
+       
+    }
+    let output1 = multiply(x,dynamicArray[length])[0];
+    return[output1,'The numbers '+dynamicArray+' have a product of '+output1+'.']
+    //eslint-disable-line
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+//console.log(multiplyAnyArray(testDynamicArray));
+ testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.

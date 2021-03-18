@@ -51,7 +51,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-    return [sum(a,b)[0]+c,multiply(a,b)[0]*c,`${a} and ${b} and ${c} sum to ${sum(a,b)[0]+c}.`,`The product of ${a} and ${b} and ${c} is ${multiply(a,b)[0]*c}.`];
+    let result = sum(a,b);
+    let ans = sum(result[0],c)[0];
+    let mul = multiply(a,b);
+    let atr = multiply(mul[0],c)[0];
+    return [ans,atr,`${a} and ${b} and ${c} sum to ${ans}.`,`The product of ${a} and ${b} and ${c} is ${atr}.`];
 }   
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);

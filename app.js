@@ -54,9 +54,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-    let output1=a+b+c;
-    let output2=a*b*c;
-    return[output1,output2,a+' and '+b+' and '+c+' sum to '+output1+'.','The product of '+a+' and '+b+' and '+c+' is '+output2+'.'];
+    let output1=sum(a,b)[0];
+    let x=sum(output1,c)[0];
+    let output2=multiply(a,b)[0];
+    let y=multiply(output2,c)[0];
+    return[x,y,a+' and '+b+' and '+c+' sum to '+x+'.','The product of '+a+' and '+b+' and '+c+' is '+y+'.'];
     //eslint-disable-line
 
 }

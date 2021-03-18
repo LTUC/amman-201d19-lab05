@@ -10,7 +10,6 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
 let result= a+b;
 return [result, 'The sum of '+a+' and '+b+' is '+ result +'.'];
-return [result, 'The sum of '+a+' and '+b+' is '+ result +'.']
 }
 //console.log(sum(3,1));
 // Here is the test for sum(); uncomment it to run it
@@ -96,10 +95,6 @@ function multiplyArray(multArr) { //eslint-disable-line
     let result =1;
     result= multiply(multiply(multArr[0],multArr[1])[0],multArr[2]);
     return[result[0],'The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+ ' have a product of '+result[0]+'.'];
-let result =1;
-result= multiply(multiply(multArr[0],multArr[1])[0],multArr[2]);
-return[result[0],'The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+ ' have a product of '+result[0]+'.'];
- main
 }
 //console.log(multiplyArray(testArray));
 // Here is the test for multiplyArray(); uncomment it to run it

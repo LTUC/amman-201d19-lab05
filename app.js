@@ -58,7 +58,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
     re2 = a+b+c;
     re2a =a*b*c;
     return[re2, re2a,a+' and '+b+' and '+c+' sum to '+re2+'.', 'The product of '+a+' and '+b+' and '+c+ ' is '+re2a+'.']
-
+ 
 }
 // console.log(sumAndMultiply(4,7,5))
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -80,6 +80,13 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    testArray = [2, 3, 4];
+    let z1 = testArray[0];
+    let z2 = testArray[1];
+    let z3 = testArray[2];
+    let re4 = z1+z2+z3
+
+    return[sumArray,testArray,'was passed in as an array of numbers, and '+re4+' is their sum.']
 
 }
 

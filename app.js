@@ -54,9 +54,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-    let output1=sum((a+b),c)[0];
-    let output2=multiply((a*b),c)[0];
-    return[output1,output2,a+' and '+b+' and '+c+' sum to '+output1+'.','The product of '+a+' and '+b+' and '+c+' is '+output2+'.'];
+
+
+    let output1=sum(a,b)[0];
+    let x=sum(output1,c)[0];
+    let output2=multiply(a,b)[0];
+    let y=multiply(output2,c)[0];
+    return[x,y,a+' and '+b+' and '+c+' sum to '+x+'.','The product of '+a+' and '+b+' and '+c+' is '+y+'.'];
+
     //eslint-disable-line
 
 }
@@ -80,14 +85,19 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { 
-    let x=1;
-    for (let i=0 ; i< sumArr.length ; i++)
+
+    let x=0;
+    for(let i=0 ;i<sumArr.length; i++)
     {
-        x = multiply(x,sumArr[i])[0];
+        x=sum(x,sumArr[i])[0];
     }
-    let output1 = sum(x,sumArr[length])[0];
-    return[output1,sumArr+' was passed in as an array of numbers, and '+output1+' is their sum.']
-    //eslint-disable-line
+    //let y= sum(x,sumArr[length])[0];
+    
+
+    //let output1 = sum(y,sumArr[2])[0];
+    return[x,sumArr+' was passed in as an array of numbers, and '+x+' is their sum.']
+    //eslint-disable-lin
+
 
 }
 

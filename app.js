@@ -28,8 +28,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-let c=a*b;
-return[c,'The product of '+a+' and '+b+' is '+c+'.'];
+let result=a*b;
+return[result,'The product of '+a+' and '+b+' is '+result+'.'];
 }
 console.log(multiply(5,9));
 
@@ -51,10 +51,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let d=a+b+c;
-let e=a*b*c;
-return[d,e,(a+' and '+b+' and '+c+' sum to '+d+'.'),'The product of '+a+' and '+b+' and '+c+' is '+e+'.'];
-}console.log(sumAndMultiply(4,7,5));
+ let e= sum(a,b)[0];
+ let r= sum(e,c)[0];
+//  console.log('console is',sum(e,c)[0]);
+ let s=multiply(a,b)[0];
+ let w=multiply(s,c)[0];
+//  console.log('console is ',multiply(s,c)[0]);
+
+// let d=a+b+c;
+// let e=a*b*c;
+ return[r,w,(a+' and '+b+' and '+c+' sum to '+r+'.'),'The product of '+a+' and '+b+' and '+c+' is '+w+'.'];
+}
+console.log(sumAndMultiply(4,7,5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
@@ -72,14 +80,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
+
+
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-let c=testArray[0]+testArray[1]+testArray[2];
-return[c,(testArray +' was passed in as an array of numbers, and '+c+' is their sum.')]
+let c=sum(testArray[0],testArray[1])[0];
+let b=sum(c,testArray[2])[0];
+// console.log('this is b ',b);
+return[b,(testArray +' was passed in as an array of numbers, and '+b+' is their sum.')]
 }console.log(sumArray(testArray));
 
-// Here is the test for sumArray(); uncomment it to run it
+// // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
 
@@ -96,12 +108,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
 
+
+function multiplyArray(multArr) { //eslint-disable-line
+    let c=multiply(testArray[0],testArray[1])[0];
+    let v=multiply(c,testArray[2])[0];
+// console.log('this is v',v);
+    return[v,'The numbers '+testArray+' have a product of '+v+'.'];
 }
+console.log(multiplyArray(testArray));
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 

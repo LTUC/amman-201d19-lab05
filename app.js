@@ -79,9 +79,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-let result = testArray[0]+testArray[1]+testArray[2];
-let resultString = testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and ' + result + ' is their sum.';
-return [result,resultString];
+    let result = testArray[0] + testArray[1] + testArray[2];
+    let resultString = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + result + ' is their sum.';
+    return [result, resultString];
 }
 
 console.log(sumArray(testArray));
@@ -101,10 +101,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { 
- let result = testArray[0]*testArray[1]*testArray[2];
-let resultString = 'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of ' + result + '.';
-return [result,resultString];
+function multiplyArray(multArr) {
+    let result = testArray[0] * testArray[1] * testArray[2];
+    let resultString = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + result + '.';
+    return [result, resultString];
 
 }
 
@@ -133,10 +133,28 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let result = 1;
+    let resultString;
+    let arrayIndex = 0;
+    while (dynamicArray.length > arrayIndex) {
+        result = result * dynamicArray[arrayIndex];
+        if (arrayIndex === 0) {
+            resultString = dynamicArray[arrayIndex] + ',';
+        }
+        else if ((dynamicArray.length - 1) === arrayIndex) {
+            resultString += dynamicArray[arrayIndex];
+        }
+        else {
+            resultString += dynamicArray[arrayIndex] + ',';
+        }
+        arrayIndex++;
+    }
+    resultString = 'The numbers ' + resultString + ' have a product of ' + result+'.';
 
+    return [result, resultString];
 }
 
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+console.log(multiplyAnyArray(testDynamicArray));
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.

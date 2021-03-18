@@ -146,7 +146,7 @@ function multiplyAnyArray(dynamicArray) {
        
     }
     let output1 = multiply(x,dynamicArray[length])[0];
-    return[output1,'The numbers '+dynamicArray+' have a product of '+output1+'.']
+    return[output1,'The numbers '+dynamicArray+' have a product of '+output1+'.'] 
     //eslint-disable-line
 
 }

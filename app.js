@@ -8,12 +8,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+let re;
 function sum(a, b) { //eslint-disable-line
-
-}
-
-// Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+    re = a + b;
+       return[re,'The sum of ' + a+' and '+b + ' is '+re +'.'];    
+   }   
+   // console.log(sum(4,7));
+   // Here is the test for sum(); uncomment it to run it
+   testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -26,12 +28,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+let re1;
 function multiply(a, b) { //eslint-disable-line
-
+    re1 = a * b;
+       return[re1, 'The product of '+a+' and '+b+ ' is ' +re1+'.'];
 }
 
+// console.log(multiply(5,9))
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,12 +52,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+let re2;
+let re2a;
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    re2 = a+b+c;
+    re2a =a*b*c;
+    return[re2, re2a,a+' and '+b+' and '+c+' sum to '+re2+'.', 'The product of '+a+' and '+b+' and '+c+ ' is '+re2a+'.']
+ 
 }
-
+// console.log(sumAndMultiply(4,7,5))
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -70,6 +80,13 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    testArray = [2, 3, 4];
+    let z1 = testArray[0];
+    let z2 = testArray[1];
+    let z3 = testArray[2];
+    let re4 = z1+z2+z3
+
+    return[sumArray,testArray,'was passed in as an array of numbers, and '+re4+' is their sum.']
 
 }
 

@@ -54,6 +54,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
+    let x=a+b;
     let output1=sum((a+b),c)[0];
     let output2=multiply((a*b),c)[0];
     return[output1,output2,a+' and '+b+' and '+c+' sum to '+output1+'.','The product of '+a+' and '+b+' and '+c+' is '+output2+'.'];
@@ -140,7 +141,7 @@ function multiplyAnyArray(dynamicArray) {
     let x=1;
     for (let i=0; i<dynamicArray.length;i++)
     {
-       x=x*dynamicArray[i]; 
+       x=multiply(x,dynamicArray[i])[0]; 
 
        
     }

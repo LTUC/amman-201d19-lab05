@@ -65,7 +65,6 @@ function sumAndMultiply(a, b, c)
     let m1=a*b*c;
 
     return[s1, m1,`${a} and ${b} and ${c} sum to ${s1}.`,`The product of ${a} and ${b} and ${c} is ${m1}.`];
-    //return(`Third element: ${a} and ${b} and ${c} sum to ${sum(a,b,c)}. \n Fourth element: The product of ${a} and ${b} and ${c} is ${multiply(a,b,c)}.`);
 }
 console.log(sumAndMultiply(0,1,2));
 

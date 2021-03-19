@@ -55,14 +55,14 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) 
 { //eslint-disable-line 
 
-    //let s1= sum(sum(a,b),c);
+    let s1= sum(sum(a,b)[0],c)[0];
    //let m1 =multiply(multiply(a,b),c);
 
    //let s1= sum(a,b);
    //let s2= sum(s1,c);
     
-    let s1=a+b+c;
-    let m1=a*b*c;
+    /*let s1=a+b+c;
+    let m1=a*b*c;*/
 
     return[s1, m1,`${a} and ${b} and ${c} sum to ${s1}.`,`The product of ${a} and ${b} and ${c} is ${m1}.`];
 }

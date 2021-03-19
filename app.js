@@ -31,7 +31,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
  let m= a*b;
- return[m ,`The product of ${a} and ${b} is ${m}.`,];
+
+ return[m,`The product of ${a} and ${b} is ${m}.`];
+
 
 } console.log(multiply(10,10));
 

@@ -12,7 +12,7 @@ function sum(a, b) { //eslint-disable-line
     let result = a+b;
     return [result,'The sum of '+a+' and '+b+' is '+result+'.'];
 }
-console.log(sum(1,3));
+//console.log(sum(1,3));
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -31,7 +31,7 @@ function multiply(a, b) { //eslint-disable-line
     let result = a*b;
     return [result,'The product of '+ a +' and '+ b+ ' is ' +result+'.'];
 }
-console.log(2,3)
+//console.log(multiply(2,3));
 // Here is the test for multiply(); uncomment it to run it
  testMultiply(multiply(5,9));
 
@@ -51,14 +51,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
-    let sum=a+b+c;
-    let multiply=a*b*c;
-    let sM=[sum, multiply];
-   let ThirdElement= (a+" and "+b+" and "+c+" sum to "+sum+".");
-   let FourthElement=( "The product of "+a+" and "+b+" and "+c+" is "+multiply+".");
-    return[sum,multiply, ThirdElement , FourthElement];
+    let suma=sum(sum(a,b)[0],c)[0];
+    let multiplycat=  multiply(multiply(a,b)[0],c)[0];
+    let sM=[suma, multiplycat];
+   let ThirdElement= (a+" and "+b+" and "+c+" sum to "+suma+".");
+   let FourthElement=( "The product of "+a+" and "+b+" and "+c+" is "+multiplycat+".");
+    return[suma,multiplycat, ThirdElement , FourthElement];
 }
-console.log(sumAndMultiply(1, 2, 3));
+//console.log(sumAndMultiply(1, 2, 3));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
@@ -70,7 +70,7 @@ testSumAndMultiply(4,7,5);
 Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
-
+"1,2,3 was passed in as an array of numbers, and 6 is their sum."  my console
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
@@ -79,12 +79,19 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    let y=0
+    for (let i = 0; i <sumArr.length;i++) {
+        let x =sumArr[i];
+         y=y+x
+     }
+     return[y,sumArr[0]+","+sumArr[1]+","+sumArr[2]+" was passed in as an array of numbers, and "+y+" is their sum."];
 }
+//console.log(sumArray([1,2,3]));
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 

@@ -31,7 +31,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
  let m= a*b;
- return[m ,`The product of ${a} and ${b} is ${m}.`,];
+
+ return[m,`The product of ${a} and ${b} is ${m}.`];
+
 
 } console.log(multiply(10,10));
 
@@ -87,6 +89,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    let result;
+     for (i=0; i<=2; i++)
+     {
+         result= sum( testArray[i], testArray[i+1];
+     }
+   return[ result,` ${a},${b},${c}, was passed in as an array of numbers, and ${result} is their sum.`]
 
 }
 

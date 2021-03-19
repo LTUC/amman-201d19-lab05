@@ -31,12 +31,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
  let m= a*b;
- return[m,`The product of ${a} and ${b} is ${m}.`];
+ return[m ,`The product of ${a} and ${b} is ${m}.`,];
 
 } console.log(multiply(10,10));
 
 // Here is the test for multiply(); uncomment it to run it
- testMultiply(5,9);
+ //testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,12 +53,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) 
-{ //eslint-disable-line
-   
-    return[sum(a,b,c), multiply(a,b,c), `${a} and ${b} and ${c} sum to ${sum(a,b,c)}.`, `The product of ${a} and ${b} and ${c} is ${multiply(a,b,c)}.`];
+{ //eslint-disable-line 
+
+    //let s1= sum(sum(a,b),c);
+   //let m1 =multiply(multiply(a,b),c);
+
+   //let s1= sum(a,b);
+   //let s2= sum(s1,c);
+    
+    let s1=a+b+c;
+    let m1=a*b*c;
+
+    return[s1, m1,`${a} and ${b} and ${c} sum to ${s1}.`,`The product of ${a} and ${b} and ${c} is ${m1}.`];
     //return(`Third element: ${a} and ${b} and ${c} sum to ${sum(a,b,c)}. \n Fourth element: The product of ${a} and ${b} and ${c} is ${multiply(a,b,c)}.`);
 }
-console.log(sumAndMultiply(2,4,6));
+console.log(sumAndMultiply(0,1,2));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
  //testSumAndMultiply(4,7,5);

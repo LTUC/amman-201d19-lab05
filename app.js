@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
     let s= a+b;
-     return(`The sum of ${a} and ${b} is ${s}.`);
+     return[s,`The sum of ${a} and ${b} is ${s}.`];
     //return('The sum of '+a+ 'and '+b+ ' is '+ s+ '.');
 }
 console.log(sum(2,3));

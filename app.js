@@ -63,7 +63,7 @@ function sumAndMultiply(a, b, c)
 
     return[s1, m1,`${a} and ${b} and ${c} sum to ${s1}.`,`The product of ${a} and ${b} and ${c} is ${m1}.`];
 }
-console.log(sumAndMultiply(0,1,2));
+//console.log(sumAndMultiply(0,1,2));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
  testSumAndMultiply(4,7,5);

@@ -78,7 +78,7 @@ let testArray = [2, 3, 4];
 
 function sumArray() { 
 let answer =sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
-return [answer,'2,3,4 was passed in as an array of numbers, and '+answer+' is their sum.'];
+return[answer,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+answer+' is their sum.'];
 }
 // console.log(sumArray());
 // Here is the test for sumArray(); uncomment it to run it

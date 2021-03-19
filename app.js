@@ -13,7 +13,7 @@ function sum(a, b) { //eslint-disable-line
      return[s,`The sum of ${a} and ${b} is ${s}.`];
     //return('The sum of '+a+ 'and '+b+ ' is '+ s+ '.');
 }
-console.log(sum(2,3));
+//console.log(sum(2,3));
 
 // Here is the test for sum(); uncomment it to run it
  testSum(4, 7);
@@ -35,7 +35,7 @@ function multiply(a, b) { //eslint-disable-line
  return[m,`The product of ${a} and ${b} is ${m}.`];
 
 
-} console.log(multiply(10,10));
+} //console.log(multiply(10,10));
 
 // Here is the test for multiply(); uncomment it to run it
  testMultiply(5,9);

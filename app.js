@@ -103,7 +103,7 @@ function multiplyArray() {
 return [answer,'The numbers 2,3,4 have a product of '+answer+'.'];
 
 }
-console.log(multiplyArray());
+// console.log(multiplyArray());
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
 
@@ -126,13 +126,21 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1,2,3,4,5]; 
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+function multiplyAnyArray() { 
+   
+  let x=1;
+   for(let i=0;i<testDynamicArray.length;i++)
+   {
+ 
+      x=(multiply(x,testDynamicArray[i]))[0];
+   }
+   return [x,'The numbers '+testDynamicArray[0]+','+testDynamicArray[1]+','+testDynamicArray[2]+','+testDynamicArray[3]+','+testDynamicArray[4]+' have a product of '+x+'.'];
 
 }
-
+// console.log(multiplyAnyArray(testDynamicArray));
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.

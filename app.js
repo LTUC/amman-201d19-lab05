@@ -152,25 +152,42 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+
+function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  let art = 1;
+  let msg ='';
+  for (let i = 0; dynamicArray.length > i; i++) {
+    art = multiply(dynamicArray[i],art)[0];
+    if(i==0){
+      msg = msg + dynamicArray[i];
+    }
+    else{
+      msg = msg +','+ dynamicArray[i]
+    }
+  }
+  return [art, 'The numbers '+ msg + ' have a product of ' + art + '.']
+}
+
 // let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-// function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// function multiplyAnyArray(dynamicArray) { //eslint-disable-line  بالريتيرن وبشتغل بدون الجملة الشرطية dynamicArrayهون زبط انه تحط ال 
 //   let art = 1;
 //   let msg ='';
 //   for (let i = 0; dynamicArray.length > i; i++) {
 //     art = multiply(dynamicArray[i],art)[0];
-//     if(i==0){
-//       msg = msg + dynamicArray[i];
-//     }
-//     else{
-//       msg = msg +','+ dynamicArray[i]
-//     }
+//     // if(i==0){
+//     //   msg = msg + dynamicArray[i];
+//     // }
+//     // else{
+//     //   msg = msg +','+ dynamicArray[i]
+//     // }
 //   }
-//   return [art, 'The numbers '+ msg + ' have a product of ' + art + '.']
+//   return [art, 'The numbers '+ dynamicArray + ' have a product of ' + art + '.']
 // }
 
-// // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+// // // Here is the test for multiplyArray(); uncomment it to run it
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
 

@@ -52,10 +52,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line}
-let sum = a + b + c;
-let multiply = a * b* c;
+let z = sum(a,b)[0];
+let s = sum(z,c)[0];
 
-return[sum,multiply,a+' and '+b+' and '+c+' sum to '+sum+'.','The product of '+a+' and '+b+' and '+c+' is '+multiply+'.'];
+let y = multiply(a,b)[0];
+let m = multiply(y,c)[0];
+
+return[s,m,a+' and '+b+' and '+c+' sum to '+s+'.','The product of '+a+' and '+b+' and '+c+' is '+m+'.'];
 
 }
 

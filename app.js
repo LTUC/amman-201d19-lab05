@@ -9,8 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-    let resulta = a+b;
-    return [resulta,'The sum of '+a+' and '+b+' is '+result+'.'] ;//eslint-disable-line
+    let result = a+b;
+    return [result ,'The sum of '+a+' and '+b+' is '+result+'.'] ;//eslint-disable-line
     
 }
 // console.log(sum(5, 3));
@@ -56,11 +56,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let x11=a+b+c;
-    let y11=a*b*c;
+
  
 
- return[x11,y11,a+' and '+b+' and '+c+' sum to ' +x11+'.','The product of '+a+' and '+b+' and '+c+' is '+y11+'.'];
+ return[sum(a,b)[0]+c,multiply(a,b)[0]*c,a+' and '+b+' and '+c+' sum to ' +Number(sum(a,b)[0]+c)+'.','The product of '+a+' and '+b+' and '+c+' is '+multiply(a,b)[0]*c+'.'];
 
  
 }
@@ -85,15 +84,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 let resultk;
 function sumArray(sumArr) { //eslint-disable-line
-    let testArray = [2, 3, 4]; 
-    let x1 = testArray[0]
-    let x2=testArray[1]
-    let x3 =testArray[2];
-    let resultk = x1+x2+x3;
-
-return [ resultk,testArray + ' was passed in as an array of numbers, and ' +resultk+' is their sum.'];
+    let a=testArray[0]
+    let b=testArray[1]
+    let c=testArray[2]
+return [sum(a,b)[0]+c,testArray + ' was passed in as an array of numbers, and ' +Number(sum(a,b)[0]+c)+' is their sum.'];
 }
-// console.log(sumArray[0]);
+// console.log(sumArray());
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -119,14 +115,13 @@ Test this function by hand in the console to get it working, and when you think 
 let resultn;
 function multiplyArray(multArr) { //eslint-disable-line
 
-    let testArray = [2, 3, 4]; 
-    let x6 = testArray[0]
-    let x7=testArray[1]
-    let x8 =testArray[2];
-    let resultn = x6*x7*x8;
-    return [resultn,'The numbers '+testArray+' have a product of '+resultn+'.']
+    let a=testArray[0]
+    let b=testArray[1]
+    let c=testArray[2]
+    
+    return [multiply(a,b)[0]*c,'The numbers '+testArray+' have a product of '+Number(multiply(a,b)[0]*c)+'.']
 }
-// console.log(multiplyArray[1,2,3])
+// console.log(multiplyArray())
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
@@ -153,16 +148,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 let resultb;
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-    let testDynamicArray = [1,2,3,4,5];
-    let x10=testDynamicArray[0]
-    let x20=testDynamicArray[1]
-    let x30=testDynamicArray[2]
-    let x40=testDynamicArray[3]
-    let x50=testDynamicArray[4]
-    let resultb=x10*x20*x30*x40*x50
-    return [ resultb,'The numbers '+ testDynamicArray+ ' have a product of '+ resultb+'.' ]
+    let a=testDynamicArray[0]
+    let b=testDynamicArray[1]
+    let c=testDynamicArray[2]
+    let d=testDynamicArray[3]
+    let e=testDynamicArray[4]
+    
+    return [ multiply(a,b)[0]*c*d*e,'The numbers '+ testDynamicArray+ ' have a product of '+ Number(multiply(a,b)[0]*c*d*e)+'.' ]
 } 
-// console.log(mulyiplyAnyArray(dynamicarray))
+// console.log(multiplyAnyArray());
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyAnyArray(testDynamicArray);

@@ -8,9 +8,9 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { 
-    let Result = a+b;
-    return [Result,'The sum of '+a+' and '+b+' is ' +Result+'.'];
+function sum(a, b) {
+    let Result = a + b;
+    return [Result, 'The sum of ' + a + ' and ' + b + ' is ' + Result + '.'];
     //eslint-disable-line
 }
 // Here is the test for sum(); uncomment it to run it
@@ -26,13 +26,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { 
+function multiply(a, b) {
     let Result = a * b;
-    return[Result,'The product of '+a+' and ' +b+' is ' +Result+'.']
+    return [Result, 'The product of ' + a + ' and ' + b + ' is ' + Result + '.']
     //eslint-disable-line
 }
 // Here is the test for multiply(); uncomment it to run it
- testMultiply(5,9);
+testMultiply(5, 9);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -47,9 +47,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+function sumAndMultiply(a, b, c) {
+    let first = sum(a, b)[0];
+    let second = sum(first, c)[0];
+    let one = multiply(a, b)[0];
+    let two = multiply(one, c)[0];
+    return [second,two,+a+' and '+b+' and '+c+' sum to '+second+'.','The product of '+a+' and '+b+' and '+c+' is '+two+'.' ];
 }
+
+//console.log(sumAndMultiply(4,7,5));
+// Here is the test for sumAndMultiply(); uncomment it to run it
+testSumAndMultiply(4,7,5);
+
+//eslint-disable-line
+
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -116,7 +128,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 

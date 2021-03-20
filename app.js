@@ -83,7 +83,7 @@ function sumArray(sumArr) { //eslint-disable-line
     let y=0   
      for (let i = 0; i <sumArr.length;i++) {      
            let x =sumArr[i];    
-                y=y+x    
+                y=sum(y,x)[0]    
              }  
 return[y,sumArr[0]+","+sumArr[1]+","+sumArr[2]+" was passed in as an array of numbers, and "+y+" is their sum."];
 }

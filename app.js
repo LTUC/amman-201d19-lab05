@@ -74,8 +74,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-let summation = testArray[0]+testArray[1]+testArray[2];
-return[summation, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${summation} is their sum.`];
+let summation = sum(2,3);
+let result=sum(summation[0],4)[0];
+return[result, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${result} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it

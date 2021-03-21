@@ -51,13 +51,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  
-  let sumation = a+b+c;
-  let multi = a*b*c;
-  return[sumation, multi, a+ ' and '+b+ ' and '+ c+ ' sum to '+sumation+ '.', 'The product of '+a+' and '+b+' and '+c+ ' is '+multi+'.']
+  let testArray = [a,b,c];
+  let resultsum = 0;
+  let resultmuli = 1;
+  for(let i =0 ; i < testArray.length ; i++){
+    resultsum = sum(testArray[i],resultsum)[0];
+    resultmuli = multiply(testArray[i],resultmuli)[0];
+  }
+
+  return [resultsum , resultmuli , a+ ' and '+b + ' and '+c+ ' sum to '+ resultsum + '.', 'The product of '+a+ ' and '+b+ ' and '+c+ ' is '+ resultmuli + '.']
 
 }
-//console.log(sumAndMultiply(4,7,5));
+// console.log(sumAndMultiply(4,7,5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);

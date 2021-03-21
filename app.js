@@ -13,7 +13,7 @@ function sum(a, b) { //eslint-disable-line
     return [pluse,'The sum of '+a+' and '+b+' is '+pluse+'.'];
     
 }
-//console.log(sum(5,6));
+//console.log(sum(3,3));
 // Here is the test for sum(); uncomment it to run it
  testSum(4, 7);
 
@@ -85,7 +85,7 @@ function sumArray(sumArr) { //eslint-disable-line
             }  
 return[y,sumArr[0]+","+sumArr[1]+","+sumArr[2]+" was passed in as an array of numbers, and "+y+" is their sum."];
 }
-
+//console.log(sum(3,3));
 // Here is the test for sumArray(); uncomment it to run it
 
  testSumArray(testArray);
@@ -112,7 +112,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 return[y, "The numbers "+multArr[0]+","+multArr[1]+","+multArr[2]+" have a product of "+y+"."];
 }
 
-
+//console.log(sum(3,3));
 // Here is the test for multiplyArray(); uncomment it to run it
  testMultiplyArray(testArray);
 
@@ -138,10 +138,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let y=1  ;
+    for (let i = 0; i <dynamicArray.length;i++) {      
+          let x =dynamicArray[i];    
+               y=multiply(y,x)[0]    ;
+                 } 
+return[y,"The numbers "+ dynamicArray +" have a product of "+y+"."];
 }
-
+  //console.log(sum(3,3));
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.

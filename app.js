@@ -30,12 +30,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-    // let product2 = a * b;
-    //     return [product2, 'The product of '+a+' and '+9 + ' is '+product2+ '.']
-    // }
+    let product2 = a * b;
+        return [product2, 'The product of '+a+' and '+9 + ' is '+product2+ '.']
+    }
     
     // Here is the test for multiply(); uncomment it to run it
-    // testMultiply(5,9);
+    testMultiply(5,9);
     
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -54,7 +54,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+// function sumAndMultiply(a, b, c) { //eslint-disable-line
     // let results= a+b+c;
     // let multiply= a*b*c;
     // return [ results,multiply,'4 and 7 and 5 sum to 16.',
@@ -146,7 +146,3 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
-
-// let rarray=[1,2,3];
-// let result = rarray[0]+rarray[1]+rarray[2];
-// console.log(result);
